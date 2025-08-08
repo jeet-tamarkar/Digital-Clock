@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: #f6fba2;
+    background-image: linear-gradient(315deg, #f6fba2 0%, #20ded3 74%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+.b-box {
+    height: 30%;
+    width: 75%;
+    background-color: #000;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    border: 2px solid transparent;
+    animation: border-animation 5s linear infinite;
+}
+
+
+.b-box .box {
+    padding: 2rem;
+    text-align: center;
+}
+
+
+.dot {
+    margin-bottom: 1.7rem;
+}
+
+.b-box .dot p {
+    font-size: 4rem;
+    text-align: center;
+    color: rgba(255, 255, 255, .3);
+    
+}
+
+
+.box h1 {
+    font-size: 5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.box p {
+    color: rgba(255, 255, 255, .3);
+    font-weight: 300;
+    font-size: 1.2rem;
+
+}
+
+/* animatd border */
+
+
+
+
+
+
+@keyframes border-animation {
+  0% {
+    border-color: #00ff00; /* Green */
+  }
+  20% {
+    border-color: #ff0000; /* Red */
+  }
+  40% {
+    border-color: #ffc0cb; /* Pink */
+  }
+  60% {
+    border-color: #7A288A; /* Purple */
+  }
+  80% {
+    border-color: #0000ff; /* Blue */
+  }
+  100% {
+    border-color: #00ff00; /* Green */
+  }
+}
+
+/* Optional: Adding some glow effect */
+.b-box::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 12px;
+  border: 3px solid transparent;
+  animation: border-animation-before 5s linear infinite;
+  opacity: .7;
+  filter: blur(2px);
+}
+
+@keyframes border-animation-before {
+  0% {
+    border-color: #00ff00; /* Green */
+  }
+  20% {
+    border-color: #ff0000; /* Red */
+  }
+  40% {
+    border-color: #ffc0cb; /* Pink */
+  }
+  60% {
+    border-color: #7A288A; /* Purple */
+  }
+  80% {
+    border-color: #0000ff; /* Blue */
+  }
+  100% {
+    border-color: #00ff00; /* Green */
+  }
+}
